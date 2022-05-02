@@ -3,8 +3,9 @@ This is a simple RESTful API using Node.js, Express, and Mongoose.
 
 # Project Setup
 
-1.clone 
-2.in the root create .env with these two variables, with your own values.
+1. clone https://github.com/hojat2079/JobsApi.git
+
+2. in the root, create .env with these two variables, with your own values.
 
 - MONGO_URI
 - JWT_SECRET
