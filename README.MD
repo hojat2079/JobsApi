@@ -1,4 +1,4 @@
-#Jobs Api
+# Jobs Api
 This is a simple RESTful API using Node.js, Express, and Mongoose.
 
 # Project Setup
