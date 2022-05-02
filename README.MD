@@ -1,69 +1,38 @@
-#### Setup
+#Jobs Api
+This is a simple RESTful API using Node.js, Express, and Mongoose.
+
+# Project Setup
+
+1.clone 
+2.in the root create .env with these two variables, with your own values.
+
+- MONGO_URI
+- JWT_SECRET
+
+3.After that run this command
 
 ```bash
 npm install && npm start
 ```
 
-#### Database Connection
 
-1. Import connect.js
-2. Invoke in start()
-3. Setup .env in the root
-4. Add MONGO_URI with correct value
+# Stack
+* Back
+	*  *Node.js*
+	*  *Express*
+* DB
+	*  *MongoDB*
+* Auth
+	* JWT
 
-#### Routers
 
-- auth.js
-- jobs.js
 
-#### User Model
+# Dependency
 
-Email Validation Regex
-
-```regex
-/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-```
-
-#### Register User
-
-- Validate - name, email, password - with Mongoose
-- Hash Password (with bcryptjs)
-- Save User
-- Generate Token
-- Send Response with Token
-
-#### Login User
-
-- Validate - email, password - in controller
-- If email or password is missing, throw BadRequestError
-- Find User
-- Compare Passwords
-- If no user or password does not match, throw UnauthenticatedError
-- If correct, generate Token
-- Send Response with Token
-
-#### Mongoose Errors
-
-- Validation Errors
-- Duplicate (Email)
-- Cast Error
-
-#### Security
-
-- helmet
-- cors
-- xss-clean
-- express-rate-limit
-
-Swagger UI
-
-```yaml
-/jobs/{id}:
-  parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-      required: true
-      description: the job id
-```
+- express.js : Node.js framework
+- bcryptjs : data encrypting.
+- cors : communicate the back-end to another servers.
+- dotenv : allows create runtime variables
+- jsonwebtoken : API authentication/authorization
+- mongoose : module to communicate with DDBB
+- helmet : helps protect the application from some known web vulnerabilities by properly setting HTTP headers
